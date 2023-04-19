@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AuthenticationScreen extends StatelessWidget {
   const AuthenticationScreen({super.key});
@@ -22,7 +23,9 @@ class AuthenticationScreen extends StatelessWidget {
         ),
         spacer,
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.offAllNamed("/home");
+          },
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.fromLTRB(42, 16, 42, 16),
             shape: const StadiumBorder(),

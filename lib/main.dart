@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phr/modules/authentication/screens/screens.dart';
+import 'package:phr/modules/base/screens/screens.dart';
 import 'package:phr/theme/theme.dart';
 
 void main() {
@@ -19,6 +19,10 @@ class PHRApp extends StatelessWidget {
         GetPage(
           name: "/",
           page: () => const AuthenticationScreen(),
+        ),
+        GetPage(
+          name: "/home",
+          page: () => const HomeScreen(),
         )
       ],
       themeMode: ThemeMode.light,

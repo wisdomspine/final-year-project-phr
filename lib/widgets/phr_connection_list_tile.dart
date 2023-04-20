@@ -98,28 +98,28 @@ class PHRConnectionListTile extends StatelessWidget {
     );
   }
 
-  static List<Widget> mock() {
+  static List<Widget> mock(void Function() onTap) {
     return [
       PHRConnectionListTile(
         name: "John Hopkins",
         subtitle: "Admission @ FMC Keffi",
         time: DateTime.now(),
         status: PHRConnectionStatus.active,
-        onTap: () {},
+        onTap: onTap,
       ),
       PHRConnectionListTile(
         name: "YORUPSOKZBQSX3JGXTGKQLCHRYGO3ZQZBJROG5RYAHKJYKA7H5VBEZYV3E ",
         subtitle: "Test @ BAMS",
         time: DateTime(2023, 1, 1),
         status: PHRConnectionStatus.connecting,
-        onTap: () {},
+        onTap: onTap,
       ),
       PHRConnectionListTile(
         name: "Atomen Esson",
         subtitle: "Delivery @ DASH",
         time: DateTime(2022, 1, 1),
         status: PHRConnectionStatus.completed,
-        onTap: () {},
+        onTap: onTap,
       ),
     ];
   }

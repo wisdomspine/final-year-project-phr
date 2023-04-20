@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:phr/routes.dart';
 import 'package:phr/theme/phr_theme_constants.dart';
 import 'package:phr/utils/utils.dart';
 import 'package:phr/widgets/phr_recent_record_list_tile.dart';
@@ -23,8 +25,18 @@ class HomeScreen extends StatelessWidget {
       ),
     );
 
-    List<Widget> connections = PHRConnectionListTile.mock();
-    List<Widget> records = PHRRecentRecordListTile.mock();
+    List<Widget> connections = PHRConnectionListTile.mock(
+      () {
+        Get.offAllNamed(Routes.connection);
+      },
+    );
+    List<Widget> records = PHRRecentRecordListTile.mock(
+      () {
+        Get.toNamed(
+          Routes.profileRecordSegments,
+        );
+      },
+    );
 
     List<Widget> connectionWidgets = [];
 
@@ -38,7 +50,9 @@ class HomeScreen extends StatelessWidget {
         [
           PHRRecentSectionTitle(
             title: "Recent Connections",
-            onSeeMoreTapped: () {},
+            onSeeMoreTapped: () {
+              Get.offAllNamed(Routes.connections);
+            },
           ),
           const SizedBox(
             height: 4,
@@ -73,7 +87,9 @@ class HomeScreen extends StatelessWidget {
             ),
           PHRRecentSectionTitle(
             title: "Recent records",
-            onSeeMoreTapped: () {},
+            onSeeMoreTapped: () {
+              Get.offAllNamed(Routes.profile);
+            },
           ),
           const SizedBox(
             height: 4,
@@ -110,7 +126,9 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           PHRNotificationButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(Routes.notifications);
+            },
           ),
         ],
       ),

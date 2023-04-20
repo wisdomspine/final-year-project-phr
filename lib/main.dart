@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:phr/modules/base/screens/screens.dart';
+import 'package:phr/modules/notifications/screens/screens.dart';
 import 'package:phr/modules/profile/screens/screens.dart';
 import 'package:phr/routes.dart';
 import 'package:phr/theme/theme.dart';
+
+import 'modules/connections/screens/screens.dart';
 
 void main() {
   runApp(const PHRApp());
@@ -41,6 +44,26 @@ class PHRApp extends StatelessWidget {
         GetPage(
           name: Routes.profileRecordSegments,
           page: () => const ProfileRecordSegmentsScreen(),
+        ),
+        GetPage(
+          name: Routes.connections,
+          page: () => const ConnectionsScreen(),
+        ),
+        GetPage(
+          name: Routes.connection,
+          page: () => const ConnectionScreen(),
+        ),
+        GetPage(
+          name: Routes.connectionRecords,
+          page: () => const ConnectionRecordsScreen(),
+        ),
+        GetPage(
+          name: Routes.connectionRecordSegments,
+          page: () => const ConnectionRecordSegmentsScreen(),
+        ),
+        GetPage(
+          name: Routes.notifications,
+          page: () => const NotificationsScreen(),
         ),
       ],
       themeMode: ThemeMode.light,

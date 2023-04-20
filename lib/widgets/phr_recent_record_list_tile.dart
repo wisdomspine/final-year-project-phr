@@ -76,21 +76,21 @@ class PHRRecentRecordListTile extends StatelessWidget {
     );
   }
 
-  static List<Widget> mock() {
+  static List<Widget> mock(void Function() onTap) {
     return [
       PHRRecentRecordListTile(
         title: "Appointment",
         description: "You got a new appointment with Dr. John ",
         time: DateTime.now(),
         status: PHRRecordStatus.signed,
-        onTap: () {},
+        onTap: onTap,
       ),
       PHRRecentRecordListTile(
         title: "Personal information",
         description: "Your next of kin information was updated",
         time: DateTime(2023, 1, 1),
         status: PHRRecordStatus.confirming,
-        onTap: () {},
+        onTap: onTap,
       ),
     ];
   }

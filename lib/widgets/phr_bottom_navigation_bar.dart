@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:phr/routes.dart';
 import 'package:phr/theme/theme.dart';
 
 enum PHRBottomNavigationItem {
   connections(
-    route: "/connections",
+    route: Routes.connections,
     iconData: PHRIcons.linkHorizontal,
     label: "Connections",
   ),
   home(
-    route: "/home",
+    route: Routes.home,
     iconData: PHRIcons.home,
     label: "Home",
   ),
   profile(
-    route: "/profile",
+    route: Routes.profile,
     iconData: PHRIcons.userDoctor,
     label: "Profile",
   );

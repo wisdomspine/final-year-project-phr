@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phr/theme/phr_theme_constants.dart';
 import 'package:phr/utils/utils.dart';
-import 'package:phr/widgets/phr_connection_list_tile.dart';
 import 'package:phr/widgets/phr_recent_record_list_tile.dart';
 import 'package:phr/widgets/widgets.dart';
 

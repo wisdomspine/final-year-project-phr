@@ -17,6 +17,7 @@ class PHRThemeData {
       ),
       shadowColor: PHRThemeConstants.shadowColor,
       scaffoldBackgroundColor: PHRThemeConstants.scaffoldBackgroundColor,
+      disabledColor: PHRThemeConstants.disabledColor,
     );
     return defaultData.copyWith(
       bottomNavigationBarTheme: defaultData.bottomNavigationBarTheme.copyWith(
@@ -31,6 +32,7 @@ class PHRThemeData {
         titleTextStyle: defaultData.textTheme.headlineLarge,
         backgroundColor: PHRThemeConstants.appBarBackgroundColor,
         actionsIconTheme: defaultData.iconTheme,
+        iconTheme: defaultData.iconTheme,
       ),
       listTileTheme: defaultData.listTileTheme.copyWith(
         contentPadding: const EdgeInsets.all(10),
@@ -41,6 +43,15 @@ class PHRThemeData {
             color: defaultData.shadowColor.withOpacity(.2),
           ),
         ),
+      ),
+      bottomSheetTheme: defaultData.bottomSheetTheme.copyWith(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(16),
+            topRight: Radius.circular(16),
+          ),
+        ),
+        clipBehavior: Clip.hardEdge,
       ),
     );
   }
@@ -67,6 +78,12 @@ class PHRThemeData {
       headlineMedium: interTheme.headlineMedium?.copyWith(
         height: 1,
         fontSize: 24,
+        color: PHRThemeConstants.primaryColor,
+        fontWeight: FontWeight.w600,
+      ),
+      headlineSmall: interTheme.headlineSmall?.copyWith(
+        height: 1,
+        fontSize: 18,
         color: PHRThemeConstants.primaryColor,
         fontWeight: FontWeight.w600,
       ),

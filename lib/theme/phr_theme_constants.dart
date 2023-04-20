@@ -7,6 +7,7 @@ class PHRThemeConstants {
   static const Color bodySmallColor = Color(0xFF4A4E56);
   static const Color labelSmallColor = Color(0xFFA9AFB9);
   static const Color disabledColor = Color(0xFFEEF1F5);
+  static const Color dialogContentColor = Color(0xFF232529);
   static const Color selectedBottomNavigationBarItemColor = Color(0xFF161719);
   static Color unselectedBottomNavigationBarItemColor =
       const Color(0xFF4A4E56).withOpacity(.8);

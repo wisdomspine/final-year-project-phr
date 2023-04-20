@@ -53,6 +53,16 @@ class PHRThemeData {
         ),
         clipBehavior: Clip.hardEdge,
       ),
+      dialogTheme: defaultData.dialogTheme.copyWith(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+        backgroundColor: PHRThemeConstants.backgroundColor,
+        contentTextStyle: defaultData.textTheme.bodyMedium?.copyWith(
+          color: PHRThemeConstants.dialogContentColor,
+        ),
+        alignment: Alignment.center,
+      ),
     );
   }
 

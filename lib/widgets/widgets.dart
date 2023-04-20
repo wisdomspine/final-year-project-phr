@@ -11,3 +11,4 @@ export './phr_transaction_list_tile.dart';
 export './phr_recent_record_list_tile.dart';
 export './phr_segment_list_tile.dart';
 export './phr_record_bottom_sheet.dart';
+export './phr_alert_dialog.dart';

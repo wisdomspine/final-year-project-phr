@@ -58,7 +58,19 @@ class ProfileScreen extends StatelessWidget {
               padding: const EdgeInsets.all(32),
               child: ElevatedButton(
                 onPressed: () {
-                  Get.offAllNamed(Routes.authentication);
+                  PHRAlertDialog.show(
+                    content:
+                        "Are you sure you want to disconnect your wallet from the application?",
+                    secondary: "Disconect Wallet",
+                    primary: "Stay Connected",
+                  ).then(
+                    (action) {
+                      if (action == PHRAlertDialogAction.secondary) {
+                        // TODO: disconnect wallet
+                        Get.offAllNamed(Routes.authentication);
+                      }
+                    },
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.fromLTRB(42, 16, 42, 16),

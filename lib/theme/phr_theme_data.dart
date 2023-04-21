@@ -64,6 +64,20 @@ class PHRThemeData {
         ),
         alignment: Alignment.center,
       ),
+      inputDecorationTheme: defaultData.inputDecorationTheme.copyWith(
+        labelStyle: const TextStyle(
+          color: PHRThemeConstants.bodySmallColor,
+          fontWeight: FontWeight.normal,
+        ),
+        floatingLabelStyle: const TextStyle(
+          color: PHRThemeConstants.bodyMediumColor,
+          fontWeight: FontWeight.w600,
+        ),
+        hintStyle: const TextStyle(
+          color: PHRThemeConstants.bodySmallColor,
+          fontWeight: FontWeight.normal,
+        ),
+      ),
     );
   }
 

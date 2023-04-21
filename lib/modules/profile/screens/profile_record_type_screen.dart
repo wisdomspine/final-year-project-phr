@@ -20,7 +20,7 @@ class ProfileRecordTypeScreen extends StatelessWidget {
               "No personal information found. Please provide basic details to create your health record.",
           buttonText: "Add Copy",
           onTap: () {
-            // TODO: Navigate to add record screen
+            Get.toNamed(Routes.addProfileRecord);
           },
         ),
       ),
@@ -44,7 +44,9 @@ class ProfileRecordTypeScreen extends StatelessWidget {
         ),
         actions: [
           PHRAddRecordIconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(Routes.addProfileRecord);
+            },
           ),
         ],
       ),

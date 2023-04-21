@@ -17,6 +17,7 @@ class PHRThemeConstants {
   static const Color pendingColor = Color(0xFFF0B90B);
   static const Color inactiveColor = Color(0xFFFF060A);
   static const Color shadowColor = Color(0xFFA9AFB9);
+  static const Color selectedListTileColor = Color(0xFFEEF1F5);
 
   // padding
   static const double mediumPadding = 16;

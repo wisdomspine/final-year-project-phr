@@ -37,6 +37,7 @@ class PHRThemeData {
       listTileTheme: defaultData.listTileTheme.copyWith(
         contentPadding: const EdgeInsets.all(10),
         tileColor: PHRThemeConstants.backgroundColor,
+        selectedTileColor: PHRThemeConstants.selectedListTileColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
           side: BorderSide(
